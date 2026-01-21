@@ -68,8 +68,7 @@ const FlappyBird: React.FC<FlappyBirdProps> = ({ gameState, onGameOver, onScoreU
   }, [jump]);
 
   // Handle Pointer/Click - Canvas specific
-  const handlePointerDown = (e: React.PointerEvent) => {
-    e.preventDefault();
+  const handlePointerDown = () => {
     // Only jump if we are playing
     if (gameState === GameState.PLAYING) {
       jump();
